@@ -45,22 +45,18 @@
 
     <!-- Favicon
          REEMPLAZAR POR EL FAVICON DEFINITIVO DE ESTUDIO SOULÉ -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon_soule.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_soule_1.png">
 
 
     <!-- Google Fonts -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
     <!-- Bootstrap Icons -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-
-
-    <!-- SimpleLightbox plugin CSS -->
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
 
 
     <!-- Core theme CSS -->
@@ -80,7 +76,7 @@
     "@type": "ProfessionalService",
     "name": "Estudio Soulé",
     "description": "Administración profesional de consorcios en Buenos Aires. Gestión integral, expensas, mantenimiento y atención personalizada a propietarios.",
-    "telephone": "+5491164762828",
+    "telephone": "+5491148736162",
     "areaServed": {
         "@type": "City",
         "name": "Buenos Aires"
@@ -271,10 +267,18 @@
 
                         En Estudio Soulé creemos que una buena administración
                         empieza por escuchar, ordenar y comunicar.
-
                         Trabajamos para que cada consorcio tenga una gestión
                         clara, responsable y cercana, cuidando tanto el funcionamiento
                         del edificio como el patrimonio de sus propietarios.
+
+                    </p>
+
+                    <p class="text-white-75 mb-4">
+
+                        Somos un estudio familiar con más de tres décadas administrando
+                        consorcios en la Ciudad de Buenos Aires. Trabajamos con herramientas
+                        digitales que nos permiten una gestión precisa y ordenada,
+                        manteniendo el compromiso que nos caracteriza desde el primer día.
 
                     </p>
 
@@ -1006,7 +1010,7 @@
                         <!-- Name input-->
                         <div class="form-floating mb-3">
 
-                            <input class="form-control" id="name" type="text" placeholder="Nombre y apellido"
+                            <input class="form-control" id="name" name="name" type="text" placeholder="Nombre y apellido"
                                 required />
 
                             <label for="name">
@@ -1023,7 +1027,7 @@
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
 
-                            <input class="form-control" id="email" type="email" placeholder="nombre@email.com"
+                            <input class="form-control" id="email" name="email" type="email" placeholder="nombre@email.com"
                                 required />
 
                             <label for="email">
@@ -1040,7 +1044,7 @@
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
 
-                            <input class="form-control" id="phone" type="tel" placeholder="Teléfono" inputmode="numeric"
+                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="Teléfono" inputmode="numeric"
                                 maxlength="10" minlength="10" pattern="[0-9]{10}" required />
 
                             <label for="phone">
@@ -1057,7 +1061,7 @@
                         <!-- Message input-->
                         <div class="form-floating mb-3">
 
-                            <textarea class="form-control" id="message" placeholder="Contanos sobre tu propiedad"
+                            <textarea class="form-control" id="message" name="message" placeholder="Contanos sobre tu propiedad"
                                 style="height: 6rem" required></textarea>
 
                             <label for="message">
@@ -1166,13 +1170,7 @@
     </script>
 
 
-    <!-- SimpleLightbox plugin JS -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js">
-    </script>
-
-
-       <!-- Core theme JS -->
+    <!-- Core theme JS -->
 
     <script src="js/scripts.js"></script>
 

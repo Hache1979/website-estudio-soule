@@ -70,15 +70,6 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 
-    // SimpleLightbox
-    if (document.querySelectorAll('#portfolio a.portfolio-box').length > 0) {
-
-        new SimpleLightbox({
-            elements: '#portfolio a.portfolio-box'
-        });
-
-    }
-
 });
 
 
@@ -160,43 +151,34 @@ if (contactForm && successMessage) {
         event.preventDefault();
         event.stopPropagation();
 
-
-        // ==========================================
-        // VALIDACIÓN
-        // ==========================================
-
         if (!contactForm.checkValidity()) {
-
             contactForm.classList.add("was-validated");
-
             return;
-
         }
 
+        const errorMessage = document.getElementById("submitErrorMessage");
+        const formData = new FormData(contactForm);
 
-        // ==========================================
-        // LIMPIAR FORMULARIO
-        // ==========================================
-
-        contactForm.reset();
-
-
-        // ==========================================
-        // OCULTAR FORMULARIO
-        // ==========================================
-
-        contactForm.style.display = "none";
-
-
-        // ==========================================
-        // MOSTRAR MENSAJE DE ÉXITO
-        // ==========================================
-
-        successMessage.classList.remove("d-none");
-
-        successMessage.style.display = "block";
-        successMessage.style.visibility = "visible";
-        successMessage.style.opacity = "1";
+        fetch("https://formspree.io/f/xeajrykr", {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        })
+        .then(response => {
+            if (response.ok) {
+                contactForm.reset();
+                contactForm.style.display = "none";
+                successMessage.classList.remove("d-none");
+                successMessage.style.display = "block";
+                successMessage.style.visibility = "visible";
+                successMessage.style.opacity = "1";
+            } else {
+                if (errorMessage) errorMessage.classList.remove("d-none");
+            }
+        })
+        .catch(() => {
+            if (errorMessage) errorMessage.classList.remove("d-none");
+        });
 
     });
 
