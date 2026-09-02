@@ -1,2 +1,2 @@
-/leads   /leads/   301
-/leads/*  https://landing-estudio-soule.netlify.app/:splat  200
+/landing   /landing/   301
+/landing/*  https://landing-estudio-soule.netlify.app/:splat  200
