@@ -167,11 +167,7 @@ if (contactForm && successMessage) {
         .then(response => {
             if (response.ok) {
                 contactForm.reset();
-                contactForm.style.display = "none";
-                successMessage.classList.remove("d-none");
-                successMessage.style.display = "block";
-                successMessage.style.visibility = "visible";
-                successMessage.style.opacity = "1";
+                window.location.href = "gracias.html";
             } else {
                 if (errorMessage) errorMessage.classList.remove("d-none");
             }
