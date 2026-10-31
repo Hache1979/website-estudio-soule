@@ -12747,7 +12747,7 @@ header.masthead {
             rgba(18, 59, 93, 0.25) 80%,
             rgba(18, 59, 93, 0.08) 100%
         ),
-        url("../assets/img/hero_edificio.png");
+        url("../assets/img/hero_edificio.webp");
 
     background-position: center;
     background-repeat: no-repeat;
@@ -13004,3 +13004,38 @@ header.masthead p {
   }
 }
 
+
+
+/* ==========================================
+   PRIVACY POLICY PAGE
+   ========================================== */
+
+.privacy-section h2 {
+    margin-top: 2rem;
+    color: #123B5D;
+}
+
+.privacy-section p,
+.privacy-section li {
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   CONTACT — PRIVACY NOTICE AND PHONE
+   ========================================== */
+
+.form-privacy-notice a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.contact-phone-link {
+    color: #123B5D;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-phone-link:hover {
+    color: #3A9AF4;
+}

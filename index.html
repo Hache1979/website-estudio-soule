@@ -76,7 +76,7 @@
     "@type": "ProfessionalService",
     "name": "Estudio Soulé",
     "description": "Administración profesional de consorcios en Buenos Aires. Gestión integral, expensas, mantenimiento y atención personalizada a propietarios.",
-    "telephone": "+5491148736162",
+    "telephone": "+541148736162",
     "areaServed": {
         "@type": "City",
         "name": "Buenos Aires"
@@ -1046,15 +1046,15 @@
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
 
-                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="Teléfono" inputmode="numeric"
-                                maxlength="10" minlength="10" pattern="[0-9]{10}" required />
+                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="Teléfono" inputmode="tel"
+                                autocomplete="tel" required />
 
                             <label for="phone">
                                 Teléfono
                             </label>
 
                             <div class="invalid-feedback">
-                                El teléfono debe tener 10 dígitos.
+                                Ingresá tu teléfono con código de área (ej: 11 2345-6789).
                             </div>
 
                         </div>
@@ -1085,6 +1085,11 @@
                             </button>
 
                         </div>
+
+                        <p class="small text-muted text-center mt-3 mb-0 form-privacy-notice">
+                            Al enviar, aceptás nuestra
+                            <a href="politica-de-privacidad.html">Política de privacidad</a>.
+                        </p>
 
                     </form>
 
@@ -1132,10 +1137,12 @@
 
                 <div class="col-lg-4 text-center">
 
-                    <i class="bi-phone fs-2 mb-2 text-muted"></i>
+                    <i class="bi-phone fs-2 mb-2 text-muted" aria-hidden="true"></i>
 
                     <div>
-                        (+54) 11.4873.6162
+                        <a class="contact-phone-link" href="tel:+541148736162">
+                            11 4873-6162
+                        </a>
                     </div>
 
                 </div>
@@ -1157,6 +1164,8 @@
             <div class="small text-center text-muted">
 
                 &copy; 2026 - Estudio Soulé
+                &middot;
+                <a class="text-muted" href="politica-de-privacidad.html">Política de privacidad</a>
 
             </div>
 
