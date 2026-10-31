@@ -210,7 +210,25 @@ if (contactForm && successMessage) {
         }
 
         const errorMessage = document.getElementById("submitErrorMessage");
+        const submitButton = document.getElementById("submitButton");
         const formData = new FormData(contactForm);
+
+        // Evitar envíos dobles
+        if (submitButton.disabled) {
+            return;
+        }
+
+        const submitButtonText = submitButton.textContent;
+
+        const mostrarError = () => {
+            submitButton.disabled = false;
+            submitButton.textContent = submitButtonText;
+            if (errorMessage) errorMessage.classList.remove("d-none");
+        };
+
+        if (errorMessage) errorMessage.classList.add("d-none");
+        submitButton.disabled = true;
+        submitButton.textContent = "Enviando...";
 
         fetch("https://formspree.io/f/xeajrykr", {
             method: "POST",
@@ -222,12 +240,10 @@ if (contactForm && successMessage) {
                 contactForm.reset();
                 window.location.href = "gracias.html";
             } else {
-                if (errorMessage) errorMessage.classList.remove("d-none");
+                mostrarError();
             }
         })
-        .catch(() => {
-            if (errorMessage) errorMessage.classList.remove("d-none");
-        });
+        .catch(mostrarError);
 
     });
 

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /gracias.html
+Disallow: /landing/gracias.html
+
+Sitemap: https://www.estudiosoule.com.ar/sitemap.xml

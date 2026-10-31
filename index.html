@@ -17,9 +17,8 @@
     <meta name="theme-color" content="#123B5D" />
 
 
-    <!-- Canonical
-         COMPLETAR CON EL DOMINIO DEFINITIVO -->
-    <!-- <link rel="canonical" href="https://www.tudominio.com.ar/" /> -->
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.estudiosoule.com.ar/" />
 
 
     <!-- Open Graph -->
@@ -33,14 +32,17 @@
 
     <meta property="og:site_name" content="Estudio Soulé" />
 
-    <!-- COMPLETAR CUANDO DEFINAMOS LA URL -->
-    <!-- <meta property="og:url" content="https://www.tudominio.com.ar/" /> -->
+    <meta property="og:url" content="https://www.estudiosoule.com.ar/" />
 
-    <!-- La imagen OG la agregamos cuando definamos el hero -->
-    <!--
-    <meta property="og:image"
-        content="https://www.tudominio.com.ar/assets/img/estudio-soule-home.jpg" />
-    -->
+    <meta property="og:locale" content="es_AR" />
+
+    <meta property="og:image" content="https://www.estudiosoule.com.ar/assets/img/hero_edificio.png" />
+
+    <meta property="og:image:width" content="1536" />
+
+    <meta property="og:image:height" content="1024" />
+
+    <meta name="twitter:card" content="summary_large_image" />
 
 
     <!-- Favicon
@@ -76,7 +78,10 @@
     "@type": "ProfessionalService",
     "name": "Estudio Soulé",
     "description": "Administración profesional de consorcios en Buenos Aires. Gestión integral, expensas, mantenimiento y atención personalizada a propietarios.",
+    "url": "https://www.estudiosoule.com.ar/",
+    "image": "https://www.estudiosoule.com.ar/assets/img/hero_edificio.png",
     "telephone": "+541148736162",
+    "email": "leads_outlook@outlook.com",
     "areaServed": {
         "@type": "City",
         "name": "Buenos Aires"
@@ -1007,7 +1012,12 @@
                     <!-- Contact Form -->
                     <form id="contactForm" novalidate>
 
+                        <input type="hidden" name="_subject" value="Nueva consulta - Estudio Soulé (Website)">
+
                         <input type="hidden" name="origen" value="Website ES">
+
+                        <!-- Antispam: los bots completan este campo, las personas no lo ven -->
+                        <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off">
 
                         <!-- Name input-->
                         <div class="form-floating mb-3">
@@ -1123,7 +1133,8 @@
                     <div class="d-none" id="submitErrorMessage">
 
                         <div class="text-center text-danger mb-3">
-                            Error al enviar mensaje.
+                            No pudimos enviar tu consulta. Probá de nuevo o escribinos por
+                            <a class="text-danger fw-semibold" href="https://wa.me/5491153342686" target="_blank" rel="noopener">WhatsApp</a>.
                         </div>
 
                     </div>
